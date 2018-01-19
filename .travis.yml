@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - stable
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+branches:
+  only:
+  - master    
+script:
+- npm run test:coverage
+after_success:
+  - npm run report:coverage
+  - npm run travis-deploy-once "npm run semantic-release"
+  - cd website
+  - npm install
+  - npm run build
+deploy: 
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  local-dir: build/minimalist-design-system
+  on:
+    branch: master

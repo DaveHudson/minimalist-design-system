@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HEADER TEXT Renders with DefaultProps 1`] = `
+<p>
+  Hello there!
+</p>
+`;
