@@ -1,0 +1,25 @@
+{
+  "name": "minimalist-design-system",
+  "version": "0.1.0",
+  "description": "A Design System built upon NPM modules with a minimalist theme",
+  "main": "src/index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dave Hudson <dave@applification.net> (http://applification.net/)",
+  "license": "MIT",
+  "dependencies": {
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-native-web": "0.3.2"
+  },
+  "devDependencies": {
+    "@storybook/react": "3.3.10",
+    "@storybook/addon-actions": "^3.3.10",
+    "@storybook/addon-links": "^3.3.10",
+    "@storybook/addons": "^3.3.10",
+    "babel-core": "6.26.0"
+  }
+}
