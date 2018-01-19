@@ -26,6 +26,7 @@ const siteConfig = {
   repoUrl: 'https://github.com/applification/minimalist-design-system',
   headerLinks: [
     { doc: 'installation', label: 'Docs' },
+    { href: 'https://applification.github.io/minimalist-design-system/storybook', external: true, label: 'Storybook' },
     { page: 'help', label: 'Help' },
     { blog: true, label: 'Blog' },
   ],
