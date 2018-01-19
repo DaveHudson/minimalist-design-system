@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "build-storybook -c .storybook -o website/build/minimalist-design-system/storybook",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dave Hudson <dave@applification.net> (http://applification.net/)",
