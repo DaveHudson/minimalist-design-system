@@ -23,6 +23,6 @@ deploy:
   skip-cleanup: true
   github-token: $GH_TOKEN
   keep-history: true
-  local-dir: build/minimalist-design-system
+  local-dir: website/build/minimalist-design-system
   on:
     branch: master
