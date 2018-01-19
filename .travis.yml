@@ -16,6 +16,8 @@ after_success:
   - cd website
   - npm install
   - npm run build
+  - cd ..
+  - npm run build-storybook
 deploy: 
   provider: pages
   skip-cleanup: true
