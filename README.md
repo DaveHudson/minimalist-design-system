@@ -1,1 +1,2 @@
-# minimalist-design-system
+# Minimalist Design System
+
