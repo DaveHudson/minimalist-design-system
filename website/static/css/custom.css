@@ -16,21 +16,30 @@
 }
 
 .customWrapper {
-  padding:35;
+  margin: 0px auto;
+  max-width: 900px;
+  padding: 0 20px;
 }
 
 .alignHorizontal {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-content: space-between;
+}
+
+.alignColumn {
+  display: flex;
+  flex-direction: column;
 }
 
 .colorWrapper {
-  min-width: 180px;
+  min-width: 168px;
   border:1px solid #CCCCCC; 
   border-radius: 5px;
   margin-bottom: 10px;
+  margin-right:10px;
 }
 
 .iconWrapper {
@@ -38,6 +47,23 @@
   justify-content: center;
   align-items: center;
   height: 100px;
+
+}
+
+.fontSizeWrapper {
+  min-width: 370px;
+  max-width: 670px;
+  border:1px solid #CCCCCC; 
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.fontWeightWrapper {
+  min-width: 180px;
+  border:1px solid #CCCCCC; 
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-right:20px;
 }
 
 .color {
@@ -84,12 +110,52 @@
   height: 90px; 
   padding-left: 15px; 
   padding-right: 15px; 
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   border-top: 1px solid #CCCCCC;
   color: #222222;
 }
 
+.fontSizeBoxContent {
+  height: 90px; 
+  padding-left: 20px;
+  padding-bottom: 5px;
+  border-top: 1px solid #CCCCCC;
+  color: #222222;
+}
+
+.fontWightBoxContent {
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-top: 1px solid #CCCCCC;
+  color: #222222; 
+}
+
+.typographyBoxContent {
+  padding-left: 15px; 
+  padding-right: 15px; 
+  margin-bottom: 15px;
+  border-top: 1px solid #CCCCCC;
+  color: #222222; 
+}
+
+.h2 {
+  font-size: 24px;
+  font-weight: 300;
+  padding-top: 35px;
+  padding-bottom: 15px;
+  color: rgb(56, 56, 56)
+}
+
+.h4 {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(56, 56, 56);
+  margin-top:10px;
+}
+
 .textGrey {
-  font-size: 14px; 
-  color: #888"
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px; 
+  color: #888;
 }

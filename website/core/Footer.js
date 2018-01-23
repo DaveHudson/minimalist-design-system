@@ -92,6 +92,7 @@ class Footer extends React.Component {
           Copyright &copy; {currentYear} Facebook Inc.
         </section>
         <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto|Roboto+Mono|Source+Code+Pro" rel="stylesheet" />
       </footer>
     );
   }

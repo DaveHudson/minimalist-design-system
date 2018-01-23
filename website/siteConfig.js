@@ -71,6 +71,64 @@ const icons = [
   }
 ];
 
+const typography = [
+  {
+    name: 'Roboto',
+    fontSizes: [
+      {
+        name: 'Large V',
+        class: 'large-v',
+        size: 44
+      },
+      {
+        name: 'Large IV',
+        class: 'large-iv',
+        size: 32
+      },
+      {
+        name: 'Large III',
+        class: 'large-iii',
+        size: 28
+      },
+      {
+        name: 'Large II',
+        class: 'large-ii',
+        size: 24
+      },
+      {
+        name: 'Large I',
+        class: 'large-i',
+        size: 19
+      },
+      {
+        name: 'Regular',
+        class: 'regular',
+        size: 16
+      },
+      {
+        name: 'Small I',
+        class: 'small-i',
+        size: 14
+      },
+      {
+        name: 'Small II',
+        class: 'small-ii',
+        size: 11
+      }
+    ],
+    fontWeights: [
+      {
+        name: 'Regular',
+        class: 'regular'
+      },
+      {
+        name: 'Bold',
+        class: 'bold'
+      }
+    ]
+  }
+]
+
 const siteConfig = {
   title: 'App Design System' /* title for your website */,
   tagline: 'A living app design system of node modules built with React components',
@@ -90,6 +148,7 @@ const siteConfig = {
   users,
   brandColors,
   icons,
+  typography,
   /* path to images for header/footer */
   headerIcon: 'img/docusaurus.svg',
   footerIcon: 'img/docusaurus.svg',

@@ -76,11 +76,9 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('docusaurus.svg')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
             <Button href={docUrl('doc1.html', language)}>Storybook</Button>
             <Button href={docUrl('doc2.html', language)}>Docs</Button>
           </PromoSection>
@@ -90,81 +88,7 @@ class HomeSplash extends React.Component {
   }
 }
 
-const Block = props => (
-  <Container
-    padding={['bottom', 'top']}
-    id={props.id}
-    background={props.background}>
-    <GridBlock align="center" contents={props.children} layout={props.layout} />
-  </Container>
-);
 
-const Features = props => (
-  <Block layout="fourColumn">
-    {[
-      {
-        content: 'This is the content of my feature',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'top',
-        title: 'Feature One',
-      },
-      {
-        content: 'The content of my second feature',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'top',
-        title: 'Feature Two',
-      },
-    ]}
-  </Block>
-);
-
-const FeatureCallout = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{ textAlign: 'center' }}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
-  </div>
-);
-
-const LearnHow = props => (
-  <Block background="light">
-    {[
-      {
-        content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Learn How',
-      },
-    ]}
-  </Block>
-);
-
-const TryOut = props => (
-  <Block id="try">
-    {[
-      {
-        content: 'Talk about trying this out',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'left',
-        title: 'Try it Out',
-      },
-    ]}
-  </Block>
-);
-
-const Description = props => (
-  <Block background="dark">
-    {[
-      {
-        content: 'This is another description of how this project is useful',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Description',
-      },
-    ]}
-  </Block>
-);
 
 const Colors = props => {
   if ((siteConfig.brandColors || []).length === 0) {
@@ -180,7 +104,7 @@ const Colors = props => {
         <div className="colorWrapper" key={i}>
           <div style={colorStyle} />
           <div className="colorBoxContent">
-            <h4>{color.name}</h4>
+            <h4 className="h4">{color.name}</h4>
             <p className="textGrey">{color.hex}<br />
               {color.rgb}
             </p>
@@ -191,7 +115,7 @@ const Colors = props => {
 
   return (
     <div className="customWrapper">
-      <h2>Brand</h2>
+      <h2 className="h2">Brand</h2>
       <div className="alignHorizontal">
         {brandColors}
       </div>
@@ -213,7 +137,7 @@ const Iconography = props => {
           </div>
 
           <div className="colorBoxContent">
-            <h4>{icon.name}</h4>
+            <h4 className="h4">{icon.name}</h4>
             <p className="textGrey">{icon.name}<br />
               {icon.class}
             </p>
@@ -224,9 +148,129 @@ const Iconography = props => {
 
   return (
     <div className="customWrapper">
-      <h2>Iconography</h2>
+      <h2 className="h2">Iconography</h2>
       <div className="alignHorizontal">
         {iconography}
+      </div>
+    </div>
+  )
+}
+
+const Typography = props => {
+  if ((siteConfig.typography || {}).length === 0) {
+    return null;
+  }
+
+  const typography = siteConfig.typography
+    .map((font, i) => {
+      const typographyStyle = {
+        fontFamily: 'Roboto',
+        fontSize: 22,
+        border: '1px solid #CCCCCC',
+        borderRadius: '5px',
+        marginBottom: '10px'
+      }
+      const pStyle = {
+        padding: 20
+      }
+      return (
+        <div style={typographyStyle} key={i}>
+          <p style={pStyle}>
+            A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br />
+            a b c d e f g h i j k l m n o p q r s t u v w x y z<br />
+            0 1 2 3 4 5 6 7 8 9
+          </p>
+
+          <div className="typographyBoxContent">
+            <h4 className="h4">{font.name}</h4>
+          </div>
+        </div>
+      )
+    });
+
+  return (
+    <div className="customWrapper">
+      <h2 className="h2">Typography</h2>
+      <div className="alignHorizontal">
+        {typography}
+      </div>
+
+
+    </div>
+  )
+}
+
+const FontSizes = props => {
+  if ((siteConfig.typography[0].fontSizes || []).length === 0) {
+    return null;
+  }
+
+  const sizes = siteConfig.typography[0].fontSizes
+    .map((fontSize, i) => {
+      const textSize = {
+        fontFamily: siteConfig.typography[0].name,
+        fontSize: fontSize.size,
+        paddingTop: 40,
+        paddingBottom: 40,
+        paddingLeft: 30,
+        paddingRight: 20
+      }
+      return (
+        <div className="fontSizeWrapper" key={i}>
+          <p style={textSize}>The small brown fox</p>
+          <div className="fontSizeBoxContent">
+            <h4 className="h4">{fontSize.name}</h4>
+            <p className="textGrey">{fontSize.size}</p>
+            <p className="textGrey">{fontSize.class}</p>
+          </div>
+        </div>
+      )
+    })
+
+  return (
+    <div className="customWrapper">
+      <h2 className="h2">Font Sizes</h2>
+      <div className="alignColumn">
+        {sizes}
+      </div>
+    </div>
+  )
+}
+
+const FontWeights = props => {
+  if ((siteConfig.typography[0].fontWeights || []).length === 0) {
+    return null;
+  }
+
+  const fonts = siteConfig.typography[0].fontWeights
+    .map((fontWeight, i) => {
+      const textSize = {
+        fontFamily: siteConfig.typography[0].name,
+        fontSize: 40,
+        fontWeight: fontWeight.name,
+        paddingTop: 40,
+        paddingBottom: 40,
+        paddingLeft: 30,
+        paddingRight: 20
+      }
+      return (
+        <div className="fontWeightWrapper" key={i}>
+          <p style={textSize}>
+            Aa
+        </p>
+          <div className="fontWightBoxContent">
+            <h4>{fontWeight.name}</h4>
+            <p className="textGrey">{fontWeight.class}</p>
+          </div>
+        </div>
+      )
+    })
+
+  return (
+    <div className="customWrapper">
+      <h2 className="h2">Font weights</h2>
+      <div className="alignHorizontal">
+        {fonts}
       </div>
     </div>
   )
@@ -272,12 +316,9 @@ class Index extends React.Component {
         <div className="mainContainer">
           <Colors />
           <Iconography />
-          {/* <Features />
-          <FeatureCallout />
-          <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase language={language} /> */}
+          <Typography />
+          <FontSizes />
+          <FontWeights />
         </div>
       </div>
     );
