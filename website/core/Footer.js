@@ -91,6 +91,7 @@ class Footer extends React.Component {
         <section className="copyright">
           Copyright &copy; {currentYear} Facebook Inc.
         </section>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
       </footer>
     );
   }

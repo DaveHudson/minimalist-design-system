@@ -48,6 +48,29 @@ const brandColors = [
   }
 ];
 
+const icons = [
+  {
+    name: 'User',
+    class: 'fas fa-user'
+  },
+  {
+    name: 'Bookmark',
+    class: 'fas fa-bookmark'
+  },
+  {
+    name: 'Notifications',
+    class: 'fas fa-bullhorn'
+  },
+  {
+    name: 'Flag',
+    class: 'fas fa-flag'
+  },
+  {
+    name: 'Favourite',
+    class: 'fas fa-star'
+  }
+];
+
 const siteConfig = {
   title: 'App Design System' /* title for your website */,
   tagline: 'A living app design system of node modules built with React components',
@@ -66,6 +89,7 @@ const siteConfig = {
   ],
   users,
   brandColors,
+  icons,
   /* path to images for header/footer */
   headerIcon: 'img/docusaurus.svg',
   footerIcon: 'img/docusaurus.svg',

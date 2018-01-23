@@ -199,6 +199,39 @@ const Colors = props => {
   )
 }
 
+const Iconography = props => {
+  if ((siteConfig.icons || []).length === 0) {
+    return null;
+  }
+
+  const iconography = siteConfig.icons
+    .map((icon, i) => {
+      return (
+        <div className="colorWrapper" key={i}>
+          <div className="iconWrapper">
+            <i className={icon.class}></i>
+          </div>
+
+          <div className="colorBoxContent">
+            <h4>{icon.name}</h4>
+            <p className="textGrey">{icon.name}<br />
+              {icon.class}
+            </p>
+          </div>
+        </div>
+      )
+    });
+
+  return (
+    <div className="customWrapper">
+      <h2>Iconography</h2>
+      <div className="alignHorizontal">
+        {iconography}
+      </div>
+    </div>
+  )
+}
+
 const Showcase = props => {
   if ((siteConfig.users || []).length === 0) {
     return null;
@@ -238,12 +271,13 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Colors />
-          <Features />
+          <Iconography />
+          {/* <Features />
           <FeatureCallout />
           <LearnHow />
           <TryOut />
           <Description />
-          <Showcase language={language} />
+          <Showcase language={language} /> */}
         </div>
       </div>
     );
