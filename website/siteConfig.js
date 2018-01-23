@@ -6,14 +6,7 @@
  */
 
 /* List of projects/orgs using your project for the users page */
-const users = [
-  {
-    caption: 'User1',
-    image: '/test-site/img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
-    pinned: true,
-  },
-];
+
 
 const brandColors = [
   {
@@ -142,10 +135,8 @@ const siteConfig = {
     { page: 'index', label: 'Style Guide' },
     { doc: 'introduction', label: 'Docs' },
     { href: 'https://applification.github.io/minimalist-design-system/storybook', external: true, label: 'Storybook' },
-    { page: 'help', label: 'Help' },
     { blog: true, label: 'Blog' },
   ],
-  users,
   brandColors,
   icons,
   typography,
