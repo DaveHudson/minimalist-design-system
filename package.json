@@ -4,6 +4,8 @@
   "description": "A Design System built upon NPM modules with a minimalist theme",
   "main": "src/index.js",
   "scripts": {
+    "build": "cd website && npm run build && cd .. && npm run build-storybook",
+    "dev": "cd website && npm run start",
     "commit": "git-cz",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -c .storybook -o website/build/minimalist-design-system/storybook",

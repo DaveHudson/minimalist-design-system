@@ -81,8 +81,8 @@ class HomeSplash extends React.Component {
           <ProjectTitle />
           <PromoSection>
             <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html', language)}>Example Link</Button>
-            <Button href={docUrl('doc2.html', language)}>Example Link 2</Button>
+            <Button href={docUrl('doc1.html', language)}>Storybook</Button>
+            <Button href={docUrl('doc2.html', language)}>Docs</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -121,7 +121,7 @@ const Features = props => (
 const FeatureCallout = props => (
   <div
     className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
+    style={{ textAlign: 'center' }}>
     <h2>Feature Callout</h2>
     <MarkdownBlock>These are features of this project</MarkdownBlock>
   </div>
@@ -166,6 +166,39 @@ const Description = props => (
   </Block>
 );
 
+const Colors = props => {
+  if ((siteConfig.brandColors || []).length === 0) {
+    return null;
+  }
+  const brandColors = siteConfig.brandColors
+    .map((color, i) => {
+      const colorStyle = {
+        height: 160,
+        backgroundColor: color.hex
+      }
+      return (
+        <div className="colorWrapper" key={i}>
+          <div style={colorStyle} />
+          <div className="colorBoxContent">
+            <h4>{color.name}</h4>
+            <p className="textGrey">{color.hex}<br />
+              {color.rgb}
+            </p>
+          </div>
+        </div>
+      );
+    });
+
+  return (
+    <div className="customWrapper">
+      <h2>Brand</h2>
+      <div className="alignHorizontal">
+        {brandColors}
+      </div>
+    </div>
+  )
+}
+
 const Showcase = props => {
   if ((siteConfig.users || []).length === 0) {
     return null;
@@ -204,6 +237,7 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
+          <Colors />
           <Features />
           <FeatureCallout />
           <LearnHow />

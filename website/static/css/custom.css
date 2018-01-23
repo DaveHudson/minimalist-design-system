@@ -14,3 +14,74 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+.customWrapper {
+  padding:35;
+}
+
+.alignHorizontal {
+  display: flex;
+  flex-direction: 'row';
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.colorWrapper {
+  min-width: 180px;
+  border:1px solid #CCCCCC; 
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.color {
+  height: 160px;  
+}
+
+
+.colorGold {
+  height: 160px; 
+  background-color:#BAA082;  
+}
+
+.colorWhite {
+  height: 160px; 
+  background-color:#FFFFFF;  
+}
+
+.colorBlack {
+  height: 160px; 
+  background-color:#000C17;  
+}
+
+.colorGrey {
+  height: 160px; 
+  background-color:#E2E2DC;  
+}
+
+.colorDarkGrey {
+  height: 160px; 
+  background-color:#40474F;  
+}
+
+.colorYellow {
+  height: 160px;
+  background-color: #E8AB12;
+}
+
+.colorBlue {
+  height: 160px;
+  background-color: #00667C;
+}
+
+.colorBoxContent {
+  height: 90px; 
+  padding-left: 15px; 
+  padding-right: 15px; 
+  padding-bottom: 20px;
+  color: #222222;
+}
+
+.textGrey {
+  font-size: 14px; 
+  color: #888"
+}
