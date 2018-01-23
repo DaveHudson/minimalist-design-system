@@ -139,7 +139,7 @@ const siteConfig = {
   repo: 'applificaiton/minimalist-design-system',
   repoUrl: 'https://github.com/applification/minimalist-design-system',
   headerLinks: [
-    { page: 'style-guide', label: 'Style Guide' },
+    { page: 'index', label: 'Style Guide' },
     { doc: 'introduction', label: 'Docs' },
     { href: 'https://applification.github.io/minimalist-design-system/storybook', external: true, label: 'Storybook' },
     { page: 'help', label: 'Help' },
@@ -150,8 +150,8 @@ const siteConfig = {
   icons,
   typography,
   /* path to images for header/footer */
-  headerIcon: 'img/docusaurus.svg',
-  footerIcon: 'img/docusaurus.svg',
+  headerIcon: 'img/designsystem.svg',
+  footerIcon: 'img/designsystem.svg',
   favicon: 'img/favicon.png',
   /* colors for website */
   colors: {
