@@ -1,13 +1,20 @@
 {
   "docs": {
     "Overview": [
-      "introduction"
+      "introduction",
+      "components",
+      "patterns"
     ],
     "Components": [
-      "components"
+      "buttons",
+      "textinput",
+      "passwordinput",
+      "spinner",
+      "tabs",
+      "tabbar"
     ],
     "Patterns": [
-      "patterns"
+      "login"
     ]
   }
 }
