@@ -47,7 +47,6 @@
   justify-content: center;
   align-items: center;
   height: 100px;
-
 }
 
 .fontSizeWrapper {
@@ -64,6 +63,14 @@
   border-radius: 5px;
   margin-bottom: 20px;
   margin-right:20px;
+}
+
+.appIconWrapper {
+  height: 200px;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .color {
@@ -137,6 +144,22 @@
   margin-bottom: 15px;
   border-top: 1px solid #CCCCCC;
   color: #222222; 
+}
+
+.appIconBoxContent {
+  padding-left: 15px; 
+  padding-right: 15px; 
+  padding-bottom: 5px;
+  border-top: 1px solid #CCCCCC;
+  color: #222222;
+}
+
+.h1 {
+  font-size: 32px;
+  font-weight: 300;
+  padding-top: 35px;
+  padding-bottom: 15px;
+  color: rgb(56, 56, 56)  
 }
 
 .h2 {

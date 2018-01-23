@@ -79,8 +79,8 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('doc1.html', language)}>Storybook</Button>
-            <Button href={docUrl('doc2.html', language)}>Docs</Button>
+            <Button href="https://applification.github.io/minimalist-design-system/storybook" target="_blank">Storybook</Button>
+            <Button href={docUrl('introduction.html', language)}>Docs</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -115,6 +115,7 @@ const Colors = props => {
 
   return (
     <div className="customWrapper">
+      <h1 className="h1">Style Guide</h1>
       <h2 className="h2">Brand</h2>
       <div className="alignHorizontal">
         {brandColors}
@@ -276,6 +277,36 @@ const FontWeights = props => {
   )
 }
 
+const AppIcons = props => {
+  if ((siteConfig.appIcons || []).length === 0) {
+    return null;
+  }
+
+  const appIcons = siteConfig.appIcons
+    .map((appIcon, i) => {
+      return (
+        <div className="colorWrapper" key={i}>
+          <div className="appIconWrapper">
+            <img src={imgUrl(`/favicon/${appIcon.icon}`)} />
+          </div>
+
+          <div className="appIconBoxContent">
+            <h4 className="h4">{appIcon.name}</h4>
+          </div>
+        </div>
+      )
+    });
+
+  return (
+    <div className="customWrapper">
+      <h2 className="h2">App Icons</h2>
+      <div className="alignHorizontal">
+        {appIcons}
+      </div>
+    </div>
+  )
+}
+
 class Index extends React.Component {
   render() {
     let language = this.props.language || '';
@@ -289,6 +320,7 @@ class Index extends React.Component {
           <Typography />
           <FontSizes />
           <FontWeights />
+          <AppIcons />
         </div>
       </div>
     );

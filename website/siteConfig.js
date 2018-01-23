@@ -122,9 +122,68 @@ const typography = [
   }
 ]
 
+const appIcons = [
+  {
+    name: 'Apple Icon 180x180',
+    icon: 'apple-icon-180x180.png'
+  },
+  {
+    name: 'Apple Icon 152x152',
+    icon: 'apple-icon-152x152.png'
+  },
+  {
+    name: 'Apple Icon 144x144',
+    icon: 'apple-icon-144x144.png'
+  },
+  {
+    name: 'Apple Icon 120x120',
+    icon: 'apple-icon-120x120.png'
+  },
+  {
+    name: 'Apple Icon 114x114',
+    icon: 'apple-icon-114x114.png'
+  },
+  {
+    name: 'Apple Icon 76x76',
+    icon: 'apple-icon-76x76.png'
+  },
+  {
+    name: 'Apple Icon 72x72',
+    icon: 'apple-icon-72x72.png'
+  },
+  {
+    name: 'Apple Icon 60x60',
+    icon: 'apple-icon-60x60.png'
+  },
+  {
+    name: 'Apple Icon 57x57',
+    icon: 'apple-icon-57x57.png'
+  },
+  {
+    name: 'Android Icon 192x192',
+    icon: 'android-icon-192x192.png'
+  },
+  {
+    name: 'Microsoft Icon 144x144',
+    icon: 'ms-icon-144x144.png'
+  },
+  {
+    name: 'Favicon 96x96',
+    icon: 'favicon-96x96.png'
+  },
+  {
+    name: 'Favicon 32x32',
+    icon: 'favicon-32x32.png'
+  },
+  {
+    name: 'Favicon 16x16',
+    icon: 'favicon-16x16.png'
+  }
+]
+
 const siteConfig = {
   title: 'App Design System' /* title for your website */,
-  tagline: 'A living app design system of node modules built with React components',
+  tagline: 'A living design system of node modules built with React components',
   url: 'https://applification.github.io' /* your website url */,
   baseUrl: '/minimalist-design-system/' /* base url for your project */,
   organizationName: 'applification', // or set an env variable ORGANIZATION_NAME
@@ -140,6 +199,7 @@ const siteConfig = {
   brandColors,
   icons,
   typography,
+  appIcons,
   /* path to images for header/footer */
   headerIcon: 'img/designsystem.svg',
   footerIcon: 'img/designsystem.svg',
